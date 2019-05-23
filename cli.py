@@ -12,9 +12,9 @@ def __init__():
 	# Check cache, otherwise cache important items
 	file = os.path.isfile("./cache/.cached");
 	if file:
-		Cache.LoadCache();
+		CacheHelper.LoadCache();
 	else:
-		Cache.GenerateCache();
+		CacheHelper.GenerateCache();
 
 def __main__(win):
 	__init__();
