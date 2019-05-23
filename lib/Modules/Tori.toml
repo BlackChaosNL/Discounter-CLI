@@ -1,0 +1,29 @@
+# Loader file for Tori.fi
+# Made by Jeroen Vijgen
+
+[[Module]]
+    Enabled = true
+    Identifier = "Tori"
+
+    # Defines the connection settings.
+    [Module.Server]
+        BASE_URL = "tori.fi"
+        HTTPS = true
+
+    # Define the HTML elements to Parse the data.
+    [[Module.Parse]]
+        [[Module.Parse.Cacheable]]
+            [Module.Parse.Category]
+                TYPE = "id"
+                TAG = "catgroup"
+            [Module.Parse.Area]
+                TYPE = "id"
+                TAG = "searcharea_expanded"
+        [[Module.Parse.Product]]
+            [Module.Parse.Product.ListView]
+                TYPE = "id"
+                TAG = "list_mode_thumb"
+            [Module.Parse.Product.DetailView]
+                TYPE = "class"
+                TAG = "view"
+
